@@ -17,6 +17,7 @@
 
     <h1>Calculator</h1>
 
+    <img style="width: 100px; height: 100px;" src="~/img/calculator-icon.png" />
     <div class="row"></div>
     @using (Html.BeginForm("Index", "Calculator", FormMethod.Post)) // Index method and Controller - Calculator
     {
@@ -36,7 +37,7 @@
 
         //Result
         <div class="form-group">
-            <label for="result">Input1</label>
+            <label for="result">Result</label>
             <input type="text" class="form-control" id="result" name="result" value="@Model.result" />
         </div>
 
@@ -50,7 +51,7 @@
 
 
 
-    }
+     }
 
 </body>
 </html>
