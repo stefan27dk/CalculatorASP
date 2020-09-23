@@ -1,0 +1,56 @@
+﻿@model CalculatorASP.Models.CalculatorModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CALCULATOR</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+
+    <div class="row"></div>
+    @using (Html.BeginForm("Index", "Calculator", FormMethod.Post)) // Index method and Controller - Calculator
+    {
+        // Input 1
+        <div class="form-group">
+            <label for="input1">Input1</label>
+            <input type="text" class="form-control" id="input1" name="input1" value="@Model.input1" />
+        </div>
+
+
+        // Input2
+        <div class="form-group">
+            <label for="input2">Input2</label>
+            <input type="text" class="form-control" id="input2" name="input2" value="@Model.input2" />
+        </div>
+
+
+        //Result
+        <div class="form-group">
+            <label for="result">Input1</label>
+            <input type="text" class="form-control" id="result" name="result" value="@Model.result" />
+        </div>
+
+
+        // Button    
+        <button type="submit" class="btn btn-info" id="add" value="add" name="calculate">+</button>
+        <button type="submit" class="btn btn-danger" id="min" value="min" name="calculate">-</button>
+        <button type="submit" class="btn btn-warning" id="sub" value="sub" name="calculate">*</button>
+        <button type="submit" class="btn btn-outline-dark" id="divv" value="divv" name="calculate">/</button>
+
+
+
+
+    }
+
+</body>
+</html>
